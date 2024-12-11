@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@radix-ui/themes/styles.css"
 import { Theme } from "@radix-ui/themes";
+import Leftside from "./components/leftside";
+import Rightside from "./components/rightside";
+
 
 
 export const metadata: Metadata = {
@@ -15,12 +18,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Theme>
+<html lang="en">
+  <body>
+    <Theme className="h-screen">
+      <div className="grid grid-cols-12 h-full">
+        {/* Left Sidebar */}
+        <aside className="col-span-2 bg-green-100 text-white p-4">
+          <Leftside />
+        </aside>
+
+        {/* Main Content */}
+        <main className="col-span-8  p-6">
           {children}
-        </Theme>
-      </body>
-    </html>
+        </main>
+
+        {/* Right Sidebar */}
+        <aside className="col-span-2 bg-green-100 p-4">
+          <Rightside />
+        </aside>
+      </div>
+    </Theme>
+  </body>
+</html>
+
   );
 }
