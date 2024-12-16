@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-function Navbar() {
+export function Navbar() {
   return (
     <>
         <div>
@@ -11,13 +11,13 @@ function Navbar() {
                     Logo
                 </div>
             </Link>
-            <Link href={"#"} className='flex items-center mx-4 mt-4 space-x-2'>
+            <Link href={"/"} className='flex items-center mx-4 mt-4 space-x-2'>
                 <div className='rounded-full w-4 h-4 bg-pink-300'></div>
                 <div className='font-semibold text-sm text-black'>
                     主页
                 </div>
             </Link>
-            <Link href={"#"} className='flex items-center mx-4 mt-4 space-x-2'>
+            <Link href={"/daily"} className='flex items-center mx-4 mt-4 space-x-2'>
                 <div className='rounded-full w-4 h-4 bg-pink-300'></div>
                 <div className='font-semibold text-sm text-black'>
                     日常
@@ -35,7 +35,7 @@ function Navbar() {
                     留言
                 </div>
             </Link>
-            <Link href={"#"} className='flex items-center mx-4 mt-4 space-x-2'>
+            <Link href={"/about"} className='flex items-center mx-4 mt-4 space-x-2'>
                 <div className='rounded-full w-4 h-4 bg-pink-300'></div>
                 <div className='font-semibold text-sm text-black'>
                     关于
@@ -47,4 +47,3 @@ function Navbar() {
   )
 }
 
-export default Navbar

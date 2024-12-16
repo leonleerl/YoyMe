@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Statisticboard() {
+export function Statisticboard() {
   return (
     <>
       <div>statistic</div>
@@ -8,4 +8,4 @@ function Statisticboard() {
   )
 }
 
-export default Statisticboard;
+

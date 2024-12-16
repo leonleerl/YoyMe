@@ -1,14 +1,14 @@
 import React from 'react'
-import Navbar from './navbar';
+import {FollowMe, Navbar} from './index';
 import { Separator } from '@radix-ui/themes';
 
-function Leftside() {
+export function Leftside() {
   return (
     <>
         <Navbar></Navbar>
-        <Separator size={"4"} ></Separator>
+        <Separator size={"4"} className='my-4' ></Separator>
+        <FollowMe></FollowMe>
     </>
   )
 }
 
-export default Leftside;

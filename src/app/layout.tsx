@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@radix-ui/themes/styles.css"
 import { Theme } from "@radix-ui/themes";
-import Leftside from "./components/leftside";
-import Rightside from "./components/rightside";
+import { Leftside } from "./components/index";
+import { Rightside} from "./components/index";
 
 
 
@@ -17,29 +17,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
 <html lang="en">
   <body>
-    <Theme className="h-screen">
-      <div className="grid grid-cols-12 h-full">
-        {/* Left Sidebar */}
-        <aside className="col-span-2 bg-green-100 text-white p-4">
-          <Leftside />
-        </aside>
 
-        {/* Main Content */}
-        <main className="col-span-8  p-6">
-          {children}
-        </main>
+      <Theme className="h-screen">
+        <div className="grid grid-cols-12 h-full">
+          {/* Left Sidebar */}
+          <aside className="col-span-2 bg-green-100 text-white p-4">
+            <Leftside />
+          </aside>
 
-        {/* Right Sidebar */}
-        <aside className="col-span-2 bg-green-100 p-4">
-          <Rightside />
-        </aside>
-      </div>
-    </Theme>
+          {/* Main Content */}
+          <main className="col-span-8 opacity-55">
+            {children}
+          </main>
+
+          {/* Right Sidebar */}
+          <aside className="col-span-2 bg-green-100 p-4">
+            
+            <Rightside />
+          </aside>
+        </div>
+      </Theme>
+
   </body>
 </html>
 
   );
 }
+
