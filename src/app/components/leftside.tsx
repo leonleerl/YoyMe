@@ -4,11 +4,11 @@ import { Separator } from '@radix-ui/themes';
 
 export function Leftside() {
   return (
-    <>
+    <div>
         <Navbar></Navbar>
         <Separator size={"4"} className='my-4' ></Separator>
         <FollowMe></FollowMe>
-    </>
+    </div>
   )
 }
 

@@ -19,9 +19,8 @@ export default function RootLayout({
 }>) {
 
   return (
-<html lang="en">
-  <body>
-
+  <html lang="en">
+    <body>
       <Theme className="h-screen">
         <div className="grid grid-cols-12 h-full">
           {/* Left Sidebar */}
@@ -35,8 +34,8 @@ export default function RootLayout({
           </main>
 
           {/* Right Sidebar */}
-          <aside className="col-span-2 bg-green-100 p-4">
-            
+          <aside className="col-span-2  bg-green-100 p-4">
+
             <Rightside />
           </aside>
         </div>
